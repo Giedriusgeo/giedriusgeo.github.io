@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktai</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Svetainės Logotipas">
+                <h1>Mano Nuostabi Svetainė</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Pagrindinis</a></li>
+                    <li><a href="index.html#about">Apie Mus</a></li>
+                    <li><a href="index.html#sections">Informacija</a></li>
+                    <li><a href="index.html#maps">Žemėlapiai</a></li>
+                    <li><a href="kontaktai.html" class="active">Kontaktai</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+
+        <section id="creator-info" class="creator-section content-section">
+            <div class="container">
+                <h2>Apie svetainės kūrėją</h2>
+                <div class="creator-details">
+                    <img src="img/kurejo_foto.jpg" alt="Svetainės kūrėjo nuotrauka" class="creator-photo">
+                    <p>Svetainę sukūrė: <strong>Giedrius Frančiakas</strong></p>
+                    <p>El. paštas: <a href="mailto:info@example.com">giedriusfra@gmail.com</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/in/" target="_blank" rel="noopener noreferrer">Giedrius Frančiakas</a></p>
+                    <p>Esu pradedantysis web programuotojas. Šis projektas yra mano žinių ir įgūdžių demonstracija, siekiant įgyvendinti geriausią praktiką ir išmokti naujų technologijų.</p>
+                    <p>Mano tikslas – sukurti ne tik funkcionalius, bet ir vizualiai patrauklius sprendimus, kurie atitiktų šiuolaikinius standartus. Laukiu atsiliepimų ir pasiūlymų tobulinimui!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html#about">Apie</a></li>
+                    <li><a href="index.html#sections">Informacija</a></li>
+                    <li><a href="index.html#maps">Žemėlapiai</a></li>
+                    <li><a href="kontaktai.html">Kontaktai</a></li>
+                </ul>
+            </nav>
+            <p>© <span id="current-year-contact"></span> Mano Nuostabi Svetainė. Visos teisės saugomos.</p>
+            <p>Sukurta: 2025-05-31</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript, kad automatiškai atnaujintų dabartinius metus poraštėje
+        document.getElementById('current-year-contact').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

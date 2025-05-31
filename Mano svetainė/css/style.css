@@ -1,0 +1,457 @@
+/* Bendrai: Globalūs nustatymai, šriftai ir pagrindinės spalvos */
+:root {
+    --primary-color: #3498db; /* Šviesiai mėlyna */
+    --secondary-color: #10f044ed; /* Tamsiai mėlyna/pilka */
+    --accent-color: #e74c3c; /* Raudona akcentui */
+    --text-color: #333; /* Tamsus tekstas */
+    --light-text-color: #f4f4f4; /* Šviesus tekstas (footer, header) */
+   
+    --border-color: #ddd; /* Kraštinių spalva */
+    --padding-section: 60px 0; /* Standartinis sekcijos paddingas */
+    --font-family-primary: 'Arial', sans-serif;
+    --font-family-secondary: 'Verdana', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden; /* Apsaugo nuo horizontalaus slinkties ant mobiliųjų */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Antraštė (Header) --- */
+.main-header {
+    background: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 20px 0;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Leidžia elementams persikelti į naują eilutę mobiliame */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px; /* Logotipo dydis */
+    width: auto;
+    border-radius: 50%; /* Jei norite apskritimo formos logo */
+}
+
+.logo h1 {
+    margin: 0;
+    color: var(--light-text-color);
+    font-size: 1.8em;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centruoti elementus mobiliame */
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: var(--light-text-color);
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+/* --- Pagrindinės sekcijos stilius --- */
+.content-section {
+    padding: var(--padding-section);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+/* --- Hero sekcija (Svetainės pristatymas) --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-background.jpg') no-repeat center center/cover;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section h2 {
+    color: var(--light-text-color);
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* --- Apie mus sekcija --- */
+.about-section {
+    background-color: #ffffff95;
+    padding: var(--padding-section);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* --- Informacinės skiltys --- */
+.info-sections {
+    background-color: var(--background-color);
+    padding: var(--padding-section);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-item {
+    background-color: #ffffff95;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.info-item h4 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+.info-item p {
+    padding: 0 20px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* --- Žemėlapių skiltys --- */
+.maps-section {
+    background-color: #ffffff95;
+    padding: var(--padding-section);
+}
+
+.maps-section p {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.map-item {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 20px;
+}
+
+.map-item h4 {
+    color: var(--secondary-color);
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.map-item iframe {
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Kontaktų puslapis --- */
+.contact-section {
+    background-color: #ffffff95;
+    padding: var(--padding-section);
+    text-align: center;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Svarbu iframe, kad kraštinės atrodytų gerai */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-container iframe {
+    display: block; /* Pašalina papildomą erdvę po iframe */
+}
+
+.creator-section {
+    background-color: var(--background-color);
+    padding: var(--padding-section);
+    text-align: center;
+}
+
+.creator-details {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff95;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.creator-details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.creator-details a {
+    font-weight: bold;
+}
+
+
+/* --- Poraštė (Footer) --- */
+.main-footer {
+    background: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 5px solid var(--primary-color);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+    color: var(--light-text-color);
+    font-weight: bold;
+}
+
+.main-footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Responsive dizainas (Mobile first, tada didesniems ekranams) --- */
+
+/* Mažesniems ekranams (iki 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-nav ul li {
+        margin-left: 0;
+    }
+
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-section p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .info-grid,
+    .map-grid {
+        grid-template-columns: 1fr; /* Vienas stulpelis mobiliems įrenginiams */
+    }
+
+    .map-item {
+        padding: 15px;
+    }
+}
+
+/* Spalvų paletė naudojant Adobe Color (pavyzdys):
+   Pagrindinė: #3498DB (šviesiai mėlyna)
+   Antrinė: #2C3E50 (tamsiai mėlyna/pilka)
+   Akcentas: #E74C3C (raudona)
+   Tekstas: #333333 (tamsiai pilka)
+   Fonas: #F9F9F9 (šviesiai pilka)
+*/
+
+
+body {
+    /* Nurodome fono paveikslėlį ir jo kelią.
+       Pakeiskite 'img/fono_paveikslelis.jpg' į savo paveikslėlio kelią. */
+    background-image: url('https://i.gifer.com/YjjG.gif');
+
+    /* Nustatome, kad paveikslėlis nekartotųsi */
+    background-repeat: no-repeat;
+
+    /* Nustatome, kad paveikslėlis užimtų visą fono plotą, išlaikydamas proporcijas */
+    background-size: cover;
+
+    /* Nustatome, kad paveikslėlis būtų centruotas */
+    background-position: center center;
+
+    /* Nustatome, kad paveikslėlis liktų vietoje slenkant puslapiu (pasirenkama) */
+    background-attachment: fixed;
+
+    /* Pasirenkama: Pridedame spalvos perdangą, jei norite, kad paveikslėlis nebūtų per ryškus.
+       Tai padeda geriau matyti tekstą ant fono. */
+    background-color: rgba(0, 0, 0, 0.5); /* Juoda su 50% permatomumu */
+    /* background-blend-mode: multiply;  Galite eksperimentuoti su kitais režimais */
+
+    /* Kiti bendri body stiliai (šriftai, spalvos, tarpai ir t.t.) */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333; /* Teksto spalva, kad gerai matytųsi ant fono */
+}
+
+/* Jei norite, kad tekstas gerai matytųsi ant tamsaus fono,
+   galite nustatyti šviesią teksto spalvą visiems puslapio elementams: */
+/*
+body {
+    color: #f4f4f4;
+}
+*/
+
+/* Ir tada konkrečioms sekcijoms ar elementams nustatyti jų pačių fono spalvą,
+   kad tekstas matytųsi ant šviesesnio fono, jei to reikia: */
+/*
+.main-content-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 960px;
+    border-radius: 8px;
+}
+*/

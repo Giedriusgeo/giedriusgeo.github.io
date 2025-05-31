@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svetainė su GIS ir internetiniais žemėlapiais</title>
+    <body> 
+
+    </body>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="
+    
+    
+    
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+           
+                <h1>Svetainė su GIS ir internetiniais žemėlapiais</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Pagrindinis</a></li>
+                    <li><a href="#about">Apie Mus</a></li>
+                    <li><a href="#sections">Informacija</a></li>
+                    <li><a href="#maps">Žemėlapiai</a></li>
+                    <li><a href="kontaktai.html">Kontaktai</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Sveiki atvykę!</h2>
+                <p>Ši svetainė skirta pateikti interaktyvius žemėlapius.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section content-section">
+            <div class="container">
+                <h3>Apie svetainę</h3>
+                <div class="about-content">
+                    <p>Tikslas – sukurti patrauklią ir informatyvią interneto erdvę, kuri būtų lengvai naršoma ir maloni akiai. Siekiamybė yra pateikti aiškią ir naudingą informaciją žemėlapiais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sections" class="info-sections">
+            <div class="container">
+                <h3>Informacinė skiltis</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        
+                        <h4>Svetainės duomenys</h4>
+                        <p>Svetainėje yra patalpinta šio semestro geografijos studunto padaryti žemėlapiai.Sukurti 3 analitiniai interaktyvūs internetiniai žemėlapiai, įvairiais pjūviais pristatantis demografinius, socialinius ir kultūrinius duomenis bei rodiklius. Sukurtas teminis interaktyvus internetinis žemėlapis, pristatantis skirtingos tematikos erdvinius duomenis Pietų Lietuvoje ir integruojantis el. paslaugas. Sukurtas duomenų įvedimui ir peržiūrai skirtas internetinis žemėlapis. Naudotojams leidžiama peržiūrėti ir įvesti naujus duomenis. </p>
+                        <img src="https://www.geoportal.lt/download/Matadata/Images/NZT/ort10lt_jb/image1.png"  height="100%" frameborder="0" 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="maps" class="maps-section content-section">
+            <div class="container">
+                <h3>Žemėlapiai</h3>
+                <p>Pateikiami interaktyvūs žemėlapiai, iliustruojantys įvairius taškus ir maršrutus. Šie žemėlapiai buvo sukurti naudojant skirtingas technologijas.</p>
+                <div class="map-grid">
+                    <div class="map-item">
+                        <h4>1 praktinis</h4>
+                        <h5>Gyventojų skaičius ir pasiskirstymas</h5>
+                        <iframe src="1_praktinis/map_1.html" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                        <h5>Eismo įvykiai</h5>
+
+                        <iframe src="1_praktinis/map_2.html" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                        <h5>Religinio paveldo objektai</h5>
+
+                        <iframe src="1_praktinis/map_3.html" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    <div class="map-item">
+                        <h4>2 Praktinis</h4>
+                        <h5>Kirtimų statistika ir batimetrija</h5>
+                        <iframe src="2_praktinis/index.html" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="map-item">
+                        <h4>3 Praktinis</h4>
+                        <h5>Gyventojų pasiūlymai bei problemos</h5>
+                        <iframe src="3_praktinis/index.html" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#about">Apie</a></li>
+                    <li><a href="#sections">Informacija</a></li>
+                    <li><a href="#maps">Žemėlapiai</a></li>
+                    <li><a href="kontaktai.html">Kontaktai</a></li>
+                </ul>
+            </nav>
+            <p>&copy; <span id="current-year"></span> Svetainė su GIS ir internetiniais žemėlapiais. Visos teisės saugomos.</p>
+            <p>Sukurta: 2025-05-31</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
